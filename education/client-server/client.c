@@ -1,5 +1,5 @@
 // compile: gcc client.c -o client
-// usage  : ./minor4cli hostname port
+// usage  : ./client hostname port
 
 #include <sys/socket.h>
 #include <sys/types.h>
