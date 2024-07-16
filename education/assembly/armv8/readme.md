@@ -82,8 +82,7 @@ Assumptions:
          from X13 into X3 or X4 within the cosine function.
    D13 - Used for the power func result converted to a double float.
 
-Function - Power - Assumptions
------------------------------------
+Function - Power - Assumptions:
 1. X10 - Register to track tier 2 (inner) loop, initialized to 0.
 2. X13 - Register to initialize result of function with a^0.
 3. D13 - Register to hold result of function as a double float.
@@ -91,14 +90,12 @@ Function - Power - Assumptions
 5. D12 - Register to hold base value, a, as a double float.
          Passed into function.
 
-Function - Factorial - Assumptions
------------------------------------
+Function - Factorial - Assumptions:
 1. X5  - Register to hold result of 2n!.
 2. X11 - Register to hold value of n passed into function.
          Decremented each loop, then multiplied with X5.
 
-Function - Cosine - Assumptions
------------------------------------
+Function - Cosine - Assumptions:
 1. X9  - Register to track tier 1 (outer) loop, initialized to 0.
 2. X0  - Register to hold running sum of cosx, init to 0.
 3. D0  - X0 converted from signed int to double float.
