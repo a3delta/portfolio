@@ -1,0 +1,47 @@
+{
+    "account": 88389283,
+    "dev_id": 100,
+    "last_update": "2023-12-8-3600",
+    "data": [
+        {
+            "time": "2024-4-8-3600",
+            "dev_subid": 1,
+            "pow": 60,
+            "amp": 1.5,
+            "chg_from": 0,
+            "chg_to": 100,
+            "trigger": "Physical",
+            "message": "v_percent changed"
+        },
+        {
+            "time": "2024-4-8-72050",
+            "dev_subid": 1,
+            "pow": 60,
+            "amp": 1.5,
+            "chg_from": 100,
+            "chg_to": 0,
+            "trigger": "Timer",
+            "message": "v_percent changed"
+        },
+        {
+            "time": "2024-4-8-75650",
+            "dev_subid": 2,
+            "pow": 40,
+            "amp": 3,
+            "chg_from": 0,
+            "chg_to": 100,
+            "trigger": "Schedule",
+            "message": "v_percent changed"
+        },
+        {
+            "time": "2024-4-9-36100",
+            "dev_subid": 2,
+            "pow": 40,
+            "amp": 3,
+            "chg_from": 100,
+            "chg_to": 0,
+            "trigger": "Schedule",
+            "message": "v_percent changed"
+        }
+    ]
+}
