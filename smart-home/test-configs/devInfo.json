@@ -1,0 +1,23 @@
+{
+    "account": 88389283,
+    "dev_id": 100,
+    "last_update": "2023-12-8-3600",
+    "net_ssid": "test_net_ssid",
+    "net_pass": "",
+    "data": [
+        {
+            "dev_subid": 1,
+            "pow": 60,
+            "amp": 1.5,
+            "dev_type": "switch",
+            "dev_name": "Living Room Light Switch 1"
+        },
+        {
+            "dev_subid": 2,
+            "pow": 40,
+            "amp": 3,
+            "dev_type": "switch",
+            "dev_name": "Living Room Fan Switch 1"
+        }
+    ]
+}
