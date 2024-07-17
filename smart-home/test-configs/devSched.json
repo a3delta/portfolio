@@ -1,0 +1,27 @@
+{
+    "account": 88389283,
+    "dev_id": 100,
+    "last_update": "2023-12-8-3600",
+    "data": [
+        {
+            "dev_subid": 1,
+            "sdata": [
+                {
+                    "day": 0,
+                    "time": 36000,
+                    "v_percent": 0
+                },
+                {
+                    "day": 0,
+                    "time": 39600,
+                    "v_percent": 100
+                },
+                {
+                    "day": 3,
+                    "time": 36000,
+                    "v_percent": 0
+                }
+            ]
+        }
+    ]
+}
