@@ -1,0 +1,1600 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "switch board",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "forget it",
+                        "never mind",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "can you help me",
+                        "help me",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "shut up",
+                        "off",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": [
+                        "leave app",
+                        "quit Alexa",
+                        "quit app",
+                        "main screen",
+                        "home screen",
+                        "home",
+                        "exit"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetStateIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the lamp",
+                                "the light",
+                                "the socket",
+                                "the outlet",
+                                "the toaster",
+                                "the microwave",
+                                "the switch",
+                                "the fan"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the patio",
+                                "the closet",
+                                "the master bedroom",
+                                "the bedroom",
+                                "the kitchen",
+                                "the garage",
+                                "the bathroom",
+                                "the hall",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "what is the {location} {device} status",
+                        "what is the {location} {device} state",
+                        "what is the status of {location} {device}",
+                        "what is the state of {location} {device}",
+                        "tell me the status of the {location} {device}",
+                        "tell me the state of the {location} {device}",
+                        "get the status for {location} {device}",
+                        "get the state for {location} {device}",
+                        "what is the {location} {device} set to",
+                        "what is the {location} {device} on",
+                        "what is the {location} {device} at"
+                    ]
+                },
+                {
+                    "name": "GetOnIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the dimmer",
+                                "the switch",
+                                "the outlet",
+                                "the socket",
+                                "the microwave",
+                                "the lamp",
+                                "the light",
+                                "the fan"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the patio",
+                                "the garage",
+                                "the closet",
+                                "the hallway",
+                                "the hall",
+                                "the bath room",
+                                "the kitchen",
+                                "the master bedroom",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "is {location} {device} off",
+                        "is {location} {device} on",
+                        "is {location} {device} on or off",
+                        "is the {location} {device} off",
+                        "is the {location} {device} on",
+                        "tell me if the {location} {device} is off",
+                        "tell me if the {location} {device} is on"
+                    ]
+                },
+                {
+                    "name": "GetLockIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the socket",
+                                "the outlet",
+                                "the dimmer",
+                                "the switch",
+                                "the microwave",
+                                "the lamp",
+                                "the light",
+                                "the fan"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the closet",
+                                "the master bedroom",
+                                "the patio",
+                                "the hallway",
+                                "the bedroom",
+                                "the bath room",
+                                "the garage",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "is the lock is on for {location} {device}",
+                        "tell me if the lock is on for {location} {device}",
+                        "is the {location} {device} locked",
+                        "is the {location} {device} unlocked",
+                        "tell me if the {location} {device} is locked",
+                        "tell me if the {location} {device} is unlocked"
+                    ]
+                },
+                {
+                    "name": "GetPowerIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the fan",
+                                "the lamp",
+                                "the light",
+                                "the switch",
+                                "the dimmer"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the master bedroom",
+                                "the patio",
+                                "the garage",
+                                "the hall",
+                                "the closet",
+                                "the bath room",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "what is the {location} {device} level set to",
+                        "what is the {location} {device} power at",
+                        "what is the {location} {device} power level",
+                        "what is the {location} {device} percentage",
+                        "what is the power level of {location} {device}",
+                        "what is the percentage of {location} {device}",
+                        "tell me the power of {location} {device}",
+                        "tell me the level of {location} {device}",
+                        "tell me the power percentage of {location} {device}",
+                        "get the {location} {device} power level",
+                        "get the power of {location} {device}",
+                        "get the level of {location} {device}",
+                        "get the {location} {device} percentage",
+                        "get the percent level of {location} {device}",
+                        "what power level is the {location} {device} set to",
+                        "what power is the {location} {device} on",
+                        "what level is the {location} {device} at",
+                        "what percentage is the {location} {device} on",
+                        "what percent is the {location} {device} set to"
+                    ]
+                },
+                {
+                    "name": "TurnOnIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the microwave",
+                                "the socket",
+                                "the outlet",
+                                "the dimmer",
+                                "the switch",
+                                "the lamp",
+                                "the light",
+                                "the fan"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the patio",
+                                "the garage",
+                                "the master bedroom",
+                                "the closet",
+                                "the kitchen",
+                                "the hallway",
+                                "the bath room",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "set {location} {device} as on",
+                        "change {location} {device} to on",
+                        "set {location} {device} to on",
+                        "switch {location} {device} to on",
+                        "flip {location} {device} on",
+                        "switch {location} {device} on",
+                        "turn {location} {device} on",
+                        "flip on {location} {device}",
+                        "switch on {location} {device}",
+                        "turn on {location} {device}"
+                    ]
+                },
+                {
+                    "name": "TurnOffIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the microwave",
+                                "the socket",
+                                "the outlet",
+                                "the dimmer",
+                                "the switch",
+                                "the lamp",
+                                "the light",
+                                "the fan"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the patio",
+                                "the garage",
+                                "the master bedroom",
+                                "the closet",
+                                "the kitchen",
+                                "the hallway",
+                                "the bath room",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "set {location} {device} as off",
+                        "change {location} {device} to off",
+                        "set {location} {device} to off",
+                        "switch {location} {device} to off",
+                        "flip {location} {device} off",
+                        "switch {location} {device} off",
+                        "turn {location} {device} off",
+                        "flip off {location} {device}",
+                        "switch off {location} {device}",
+                        "turn off {location} {device}"
+                    ]
+                },
+                {
+                    "name": "PowerUpIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the fan",
+                                "the lamp",
+                                "the light",
+                                "the switch",
+                                "the dimmer"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the master bedroom",
+                                "the patio",
+                                "the garage",
+                                "the hall",
+                                "the closet",
+                                "the bath room",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "increment {location} {device} value",
+                        "raise {location} {device} level",
+                        "increase {location} {device} power",
+                        "change {location} {device} higher",
+                        "set {location} {device} higher",
+                        "turn {location} {device} higher",
+                        "flip {location} {device} higher",
+                        "switch {location} {device} up",
+                        "turn {location} {device} up",
+                        "flip up {location} {device}",
+                        "switch up {location} {device}",
+                        "turn up {location} {device}"
+                    ]
+                },
+                {
+                    "name": "PowerDownIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the fan",
+                                "the lamp",
+                                "the light",
+                                "the switch",
+                                "the dimmer"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the master bedroom",
+                                "the patio",
+                                "the garage",
+                                "the hall",
+                                "the closet",
+                                "the bath room",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "reduce {location} {device} power",
+                        "drop {location} {device} level",
+                        "decrement {location} {device} value",
+                        "lower {location} {device} power level",
+                        "decrease {location} {device} power",
+                        "change {location} {device} down",
+                        "set {location} {device} lower",
+                        "switch {location} {device} lower",
+                        "turn {location} {device} down",
+                        "flip down {location} {device}",
+                        "switch down {location} {device}",
+                        "turn down {location} {device}"
+                    ]
+                },
+                {
+                    "name": "PowerSetIntent",
+                    "slots": [
+                        {
+                            "name": "percentage",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "twenty three",
+                                "fifty seven",
+                                "forty two",
+                                "thirteen",
+                                "eighty",
+                                "seventy"
+                            ]
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the fan",
+                                "the lamp",
+                                "the light",
+                                "the switch",
+                                "the dimmer"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the master bedroom",
+                                "the patio",
+                                "the garage",
+                                "the hall",
+                                "the closet",
+                                "the bath room",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "reduce {location} {device} value to {percentage}",
+                        "drop {location} {device} level to {percentage}",
+                        "decrement {location} {device} power value to {percentage}",
+                        "lower {location} {device} power level to {percentage}",
+                        "decrease {location} {device} power to {percentage}",
+                        "reduce {location} {device} to {percentage}",
+                        "drop {location} {device} to {percentage}",
+                        "decrement {location} {device} to {percentage}",
+                        "lower {location} {device} to {percentage}",
+                        "decrease {location} {device} to {percentage}",
+                        "reduce {location} {device} level to {percentage} percent",
+                        "drop {location} {device} value to {percentage} percent",
+                        "decrement {location} {device} power value to {percentage} percent",
+                        "lower {location} {device} power level to {percentage} percent",
+                        "decrease {location} {device} power to {percentage} percent",
+                        "reduce {location} {device} to {percentage} percent",
+                        "drop {location} {device} to {percentage} percent",
+                        "decrement {location} {device} to {percentage} percent",
+                        "lower {location} {device} to {percentage} percent",
+                        "decrease {location} {device} to {percentage} percent",
+                        "raise {location} {device} power to {percentage}",
+                        "increase {location} {device} level to {percentage}",
+                        "raise {location} {device} power value to {percentage}",
+                        "raise {location} {device} to {percentage}",
+                        " increase {location} {device} to {percentage}",
+                        "increase {location} {device} power level to {percentage} percent",
+                        "raise {location} {device} value to {percentage} percent",
+                        "increase {location} {device} power to {percentage} percent",
+                        "raise {location} {device} to {percentage} percent",
+                        "increase {location} {device} to {percentage} percent",
+                        "change {location} {device} power level to {percentage}",
+                        "set {location} {device} power at {percentage}",
+                        "alter {location} {device} power value to {percentage}",
+                        "set {location} {device} at {percentage}",
+                        "alter {location} {device} to {percentage}",
+                        "set {location} {device} to {percentage}",
+                        "set {location} {device} level at {percentage} percent",
+                        "alter {location} {device} power value to {percentage} percent",
+                        "set {location} {device} power at {percentage} percent",
+                        "set {location} {device} at {percentage} percent",
+                        "alter {location} {device} to {percentage} percent",
+                        "set {location} {device} to {percentage} percent"
+                    ]
+                },
+                {
+                    "name": "LockIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the microwave",
+                                "the socket",
+                                "the outlet",
+                                "the dimmer",
+                                "the switch",
+                                "the lamp",
+                                "the light",
+                                "the fan"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the patio",
+                                "the garage",
+                                "the master bedroom",
+                                "the closet",
+                                "the kitchen",
+                                "the hallway",
+                                "the bath room",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "set the {location} {device} to locked",
+                        "set the {location} {device} as locked",
+                        "set {location} {device} as locked",
+                        "set {location} {device} to locked",
+                        "change {location} {device} to locked",
+                        "flip {location} {device} to locked",
+                        "switch {location} {device} to locked",
+                        "lock {location} {device}",
+                        "lock the {location} {device}"
+                    ]
+                },
+                {
+                    "name": "UnlockIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "samples": [
+                                "the microwave",
+                                "the socket",
+                                "the outlet",
+                                "the dimmer",
+                                "the switch",
+                                "the lamp",
+                                "the light",
+                                "the fan"
+                            ]
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "samples": [
+                                "the patio",
+                                "the garage",
+                                "the master bedroom",
+                                "the closet",
+                                "the kitchen",
+                                "the hallway",
+                                "the bath room",
+                                "the bedroom",
+                                "the living room"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "set the {location} {device} as unlocked",
+                        "set the {location} {device} to unlocked",
+                        "set {location} {device} as unlocked",
+                        "set {location} {device} to unlocked",
+                        "change {location} {device} to unlocked",
+                        "flip {location} {device} to unlocked",
+                        "switch {location} {device} to unlocked",
+                        "unlock {location} {device}",
+                        "unlock the {location} {device}"
+                    ]
+                },
+                {
+                    "name": "SetOnTimerIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room"
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "unit",
+                            "type": "unit"
+                        },
+                        {
+                            "name": "limit",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "turn the {location} {device} on after {limit} {unit}",
+                        "set a timer to turn the {location} {device} on after {limit} {unit}",
+                        "turn {location} {device} on after {limit} {unit}",
+                        "set a timer to turn {location} {device} on after {limit} {unit}"
+                    ]
+                },
+                {
+                    "name": "SetOffTimerIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room"
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "unit",
+                            "type": "unit"
+                        },
+                        {
+                            "name": "limit",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "turn the {location} {device} on after {limit} {unit}",
+                        "turn {location} {device} on after {limit} {unit}",
+                        "set a timer to turn the {location} {device} on after {limit} {unit}",
+                        "set a timer to turn {location} {device} off after {limit} {unit}"
+                    ]
+                },
+                {
+                    "name": "GetTimerIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room"
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType"
+                        }
+                    ],
+                    "samples": [
+                        "what are the timer settings for the {location} {device} ",
+                        "what is the {location} {device} timer settings",
+                        "what is the {location} {device} timer set at",
+                        "what is the {location} {device} timer set on",
+                        "what is the {location} {device} timer set to"
+                    ]
+                },
+                {
+                    "name": "GetDaySchedIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room"
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "weekday",
+                            "type": "weekday"
+                        }
+                    ],
+                    "samples": [
+                        "what will {location} {device} do on {weekday}",
+                        "what is the schedule for the {location} {device} on {weekday}",
+                        "what are the schedule settings for the {location} {device} on {weekday}"
+                    ]
+                },
+                {
+                    "name": "DaySchedOnIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room"
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "weekday",
+                            "type": "weekday"
+                        }
+                    ],
+                    "samples": [
+                        "turn the {location} {device} on at {time} on {weekday}",
+                        "turn on the {location} {device} at {time} on {weekday}"
+                    ]
+                },
+                {
+                    "name": "DaySchedOffIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room"
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "weekday",
+                            "type": "weekday"
+                        }
+                    ],
+                    "samples": [
+                        "turn the {location} {device} off at {time} on {weekday}",
+                        "turn off the {location} {device} at {time} on {weekday}"
+                    ]
+                },
+                {
+                    "name": "DaySchedPowerIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room"
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "percentage",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "weekday",
+                            "type": "weekday"
+                        }
+                    ],
+                    "samples": [
+                        "raise the {location} {device} to {percentage}  percent at {time} on {weekday}",
+                        "decrease the {location} {device} to {percentage}  percent at {time} on {weekday}",
+                        "change the {location} {device} to {percentage}  percent at {time} on {weekday}",
+                        "set the {location} {device} to {percentage}  percent at {time} on {weekday}",
+                        "increase the {location} {device} to {percentage}  percent at {time} on {weekday}",
+                        "dim the {location} {device} to {percentage}  percent at {time} on {weekday}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "AMAZON.DeviceType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "small appliance",
+                                "synonyms": [
+                                    "pressure cooker",
+                                    "slow cooker",
+                                    "crock pot",
+                                    "hot plate",
+                                    "electric kettle",
+                                    "kettle",
+                                    "tea kettle",
+                                    "tea pot",
+                                    "coffee maker",
+                                    "toaster oven",
+                                    "toaster",
+                                    "air fryer",
+                                    "microwave"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "outlet",
+                                "synonyms": [
+                                    "source",
+                                    "power",
+                                    "plug",
+                                    "power outlet",
+                                    "socket",
+                                    "outlet"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fan",
+                                "synonyms": [
+                                    "air circulator",
+                                    "a.c.",
+                                    "air conditioner",
+                                    "blower",
+                                    "cooler",
+                                    "turbine",
+                                    "ceiling fan",
+                                    "exhaust fan",
+                                    "window unit",
+                                    "air circulator"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "switch",
+                                "synonyms": [
+                                    "variable switch",
+                                    "adjustable switch",
+                                    "dimmable switch",
+                                    "dimmer"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "light",
+                                "synonyms": [
+                                    "sconce",
+                                    "wall sconce",
+                                    "over head light",
+                                    "lamp",
+                                    "lights"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AMAZON.Room",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "gym",
+                                "synonyms": [
+                                    "exercise room",
+                                    "fitness center",
+                                    "fitness room"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "laundry",
+                                "synonyms": [
+                                    "laundry room"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "basement",
+                                "synonyms": [
+                                    "den"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "patio",
+                                "synonyms": [
+                                    "porch"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "garage",
+                                "synonyms": [
+                                    "workshop",
+                                    "shop"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "office",
+                                "synonyms": [
+                                    "office space",
+                                    "work room"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hall",
+                                "synonyms": [
+                                    "entryway",
+                                    "entry",
+                                    "foyer",
+                                    "passage",
+                                    "hallway"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kitchen",
+                                "synonyms": [
+                                    "pantry"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bathroom",
+                                "synonyms": [
+                                    "wash room",
+                                    "master bath",
+                                    "full bath",
+                                    "half bath",
+                                    "bath",
+                                    "water closet",
+                                    "shower",
+                                    "lavatory",
+                                    "toilet"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bedroom",
+                                "synonyms": [
+                                    "master bed",
+                                    "bed",
+                                    "master bedroom",
+                                    "room"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "living room",
+                                "synonyms": [
+                                    "common room",
+                                    "shared space",
+                                    "living space",
+                                    "communal space",
+                                    "common area",
+                                    "living area"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "unit",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "hours",
+                                "synonyms": [
+                                    "hour"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "minutes",
+                                "synonyms": [
+                                    "minute"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "seconds",
+                                "synonyms": [
+                                    "second"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "weekday",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "saturday",
+                                "synonyms": [
+                                    "saturdays"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "friday",
+                                "synonyms": [
+                                    "fridays"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thursday",
+                                "synonyms": [
+                                    "thursdays"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "wednesday",
+                                "synonyms": [
+                                    "wednesdays"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tuesday",
+                                "synonyms": [
+                                    "tuesdays"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "monday",
+                                "synonyms": [
+                                    "mondays"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sunday",
+                                "synonyms": [
+                                    "sundays"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetStateIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1610767421499.1592017087850"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1610767421499.454731073530"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "GetOnIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.79389993920.657838095394"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.79389993920.1084448944968"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "GetLockIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.993456343058.1140688902295"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.993456343058.633887604313"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "GetPowerIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.38555294660.551308935342"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.38555294660.1513610936192"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TurnOnIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.241036635332.1493723365903"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.241036635332.691788968328"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TurnOffIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1657101315058.1000258885747"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1657101315058.1335257695072"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PowerUpIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1427189474066.750928031452"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1427189474066.1578331396624"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PowerDownIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.713610460257.1181142126573"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.713610460257.72793391953"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PowerSetIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "percentage",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.515525421635.800640884575"
+                            }
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.515525421635.1577943063264"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.515525421635.505328077854"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LockIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1101933454560.1661656759817"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1101933454560.1709843343083"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "UnlockIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1537793611764.118059137871"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1537793611764.935126129095"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SetOnTimerIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "AMAZON.Room",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "unit",
+                            "type": "unit",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "limit",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1610767421499.1592017087850",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1610767421499.454731073530",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.79389993920.657838095394",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.79389993920.1084448944968",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.993456343058.633887604313",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.993456343058.1140688902295",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.38555294660.551308935342",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.38555294660.1513610936192",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.241036635332.691788968328",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.241036635332.1493723365903",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1657101315058.1000258885747",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1657101315058.1335257695072",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1427189474066.1578331396624",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1427189474066.750928031452",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.713610460257.1181142126573",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.713610460257.72793391953",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.515525421635.1577943063264",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.515525421635.505328077854",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.515525421635.800640884575",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. What percentage would you like to set the device to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1101933454560.1709843343083",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1101933454560.1661656759817",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1537793611764.935126129095",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Where is the location of the device are you referring to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1537793611764.118059137871",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I'm sorry, I did not catch that. Which device are you referring to?"
+                    }
+                ]
+            }
+        ]
+    }
+}
