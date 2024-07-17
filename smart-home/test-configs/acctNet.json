@@ -1,0 +1,21 @@
+{
+    "account": 88389283,
+    "last_update": "2023-12-8-3600",
+    "data": [
+        {
+            "net_ssid": "test_network_ssid",
+            "sdata": [
+                {
+                    "dev_id": 100,
+                    "local_ip": "192.168.4.4",
+                    "connected_on": "2023-12-8-3600"
+                },
+                {
+                    "dev_id": 200,
+                    "local_ip": "192.168.5.5",
+                    "connected_on": "2023-12-8-3600"
+                }
+            ]
+        }
+    ]
+}
