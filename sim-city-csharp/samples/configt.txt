@@ -1,0 +1,3 @@
+Region Layout:regiont.csv
+Time Limit:15
+Refresh Rate:2
