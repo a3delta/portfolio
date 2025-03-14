@@ -81,6 +81,14 @@ This document is used for planning how to approach the design of this project, f
 - [ ] End the simulation.
 
 ## data.cs
+- [ ] Declare data classes.
+  - [ ] Declare data class attributes.
+  - [ ] Declare data class methods.
+  - [ ] Establish data class inheritance modifiers.
+- [ ] Declare child data classes.
+  - [ ] Declare child data class attributes.
+  - [ ] Declare child data class methods.
+  - [ ] Establish child data class inheritance modifiers.
 
 ## io.cs
 
