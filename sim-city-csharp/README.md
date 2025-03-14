@@ -123,7 +123,7 @@ The intent of this project is to simulate the growth of a city over time with a 
 - [ ] I population provides goods to the C zones at a rate of 1 good / population, but each good can only be sold at 1 C cell.
 
 **Simulation - Residential**
-- [ ] For the following conditions, increment a cell's population:
+- [ ] For the following conditions, increment an R cell's population:
   - [ ] If its population = 0 & is adjacent to a T or #.
   - [ ] If its population = 0 & is adjacent to 1+ cells with a population of 1+.
   - [ ] If its population = 1 & is adjacent to 2+ cells with a population of 1+.
@@ -132,14 +132,14 @@ The intent of this project is to simulate the growth of a city over time with a 
   - [ ] If its population = 4 & is adjacent to 8+ cells with a population of 4+.
 
 **Simulation - Industrial**
-- [ ] For the following conditions, increment a cell's population & assign the available workers to that job if there are 2+ available workers:
+- [ ] For the following conditions, increment an I cell's population & assign the available workers to that job if there are 2+ available workers:
   - [ ] If its population = 0 & it is adjacent to a T or #.
   - [ ] If its population = 0 & it is adjacent to 1+ cells with a population of 1+.
   - [ ] If its population = 1 & it is adjacent to 2+ cells with a population of 1+.
   - [ ] If its population = 2 & it is adjacent to 4+ cells with a population of 2+.
 
 **Simulation - Commercial**
-- [ ] For the following conditions, increment a cell's population and assign 1 available worker & 1 good to that job if there are 1+ workers & 1+ goods available:
+- [ ] For the following conditions, increment a C cell's population and assign 1 available worker & 1 good to that job if there are 1+ workers & 1+ goods available:
   - [ ] If its population = 0 & it is adjacent to a T or #.
   - [ ] If its population = 0 & it is adjacent to 1+ cells with a population of 1+.
   - [ ] If its population = 1 & it is adjacent to 2+ cells with a population of 1+.
