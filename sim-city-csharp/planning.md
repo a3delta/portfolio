@@ -32,6 +32,11 @@ This document is used for planning how to approach the design of this project, f
 - Ideas
   - Represent the region as a matrix of cells stored in 2D arrays?
   - Represent each attribute as its own 2D array/matrix (a 2D array of the region layout, another of the pollution, population, workers, etc)?
+    - Pro: 2D arrays only would be clean and fast to access, and easily layered.
+    - Con: Would result in additional data allocated for cells that do not contain certain attributes.
+  - Building out cells of varying inherited classes could minimize space usage.
+    - Could use only a single 2D array for the region layout with the cells being stored in it, rather than duplicating that data.
+    - Make sure not to create copies of the full matrix data when passing to functions since that drastically increases space complexity.
 
 ## main.cs
 
