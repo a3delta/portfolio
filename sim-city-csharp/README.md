@@ -1,5 +1,5 @@
 
-# DESIGN
+# READ ME
 
 ## Intent
 To rework my existing `sim-city` project in `c#` to practice `c#` and rework the project into something better and 100% done by me.
