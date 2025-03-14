@@ -15,30 +15,70 @@ This document is used for planning how to approach the design of this project, f
 - [ ] analysis.cs - This will be where whole & partial regional analysis functions are defined.
 
 ## Data Types
-- **Region Layout** - *2D array* since it is a flat rectangle as a matrix in CSV format.
+- **Region Layout**
+  - \[*array*\]\[*array*\]\[*char*\] cell layout
+    - Regional layout of cell types as a flat rectangle from a matrix in CSV format.
 - **Base Cell Class**
-  - *char* for cell type, since cell types can be represented as a single letter (may update to string).
-  - *int* for cell pollution, since all cells can acquire pollution levels.
+  - \[*char*\] type
+    - Cell types can be represented as a single letter (may update to string when adding features).
+  - \[*int*\] pollution
+    - All cells can acquire pollution levels.
 - **Zoned Cell Class**
-  - population
-  - adjacencies
-- **Industrial Cell Class**
-  - workers
-- **Commercial Cell Class**
-  - workers
-  - goods
-- **Cell Matrix** - *2D array of class objects* since cells can be accessed fast due to their ordered congruous layout.
-  - Searching, insertions, and deletions are not necessary for this simulation (if they were, this type should be re-evaluated).
-- Ideas
-  - Represent the region as a matrix of cells stored in 2D arrays?
-  - Represent each attribute as its own 2D array/matrix (a 2D array of the region layout, another of the pollution, population, workers, etc)?
-    - Pro: 2D arrays only would be clean and fast to access, and easily layered.
-    - Con: Would result in additional data allocated for cells that do not contain certain attributes.
-  - Building out cells of varying inherited classes could minimize space usage.
-    - Could use only a single 2D array for the region layout with the cells being stored in it, rather than duplicating that data.
-    - Make sure not to create copies of the full matrix data when passing to functions since that drastically increases space complexity.
+  - \[*int*\] population
+    - All zoned cells have a population.
+  - \[*array*\]\[*tuple*\] adjacencies
+    - All zoned cells have rules regarding adjacenices comparisons.
+    - Storing will be faster than calculating (if space becomes an issue, switch to calculated adjacencies).
+  - \[*int*\] workers
+    - For residential cells, this tracks the count of the population that works (residential population provides workers at a 1:1 ratio).
+    - For industrial & commercial cells, this tracks the number of workers assigned to the cell.
+- **Industry/(Industrial & Commercial) Cell Class**
+  - \[*int*\] goods
+    - For industrial cells, this tracks the count of sold goods (industrial population provides goods at a 1:1 ratio).
+    - For commercial cells, this tracks the number of goods assigned to the cell.
+- **Cell Matrix**
+  - \[*array*\]\[*array*\]\[*cell*\] cells with full data based on inheritance
+    - Cells can be accessed fast due to their ordered congruous layout.
+    - Searching, insertions, and deletions are not necessary for this simulation (if they were, this type should be re-evaluated).
+    - Choosing this over multiple simple 2D arrays/matrices since multiple matrices would result in unnecessary additional space usage.
+- **Next Time Step Matrix**
+  - \[*array*\]\[*array*\]\[*hash*\] changes to make to the region on the next time step
+    - Hash tables should have 3 keys for population, workers, and goods containing ints of how much to change those values by.
 
 ## main.cs
+- [ ] Input - Prompt user for a configuration file name.
+  - [ ] Validate Configuration - Verify the file is valid. Reprompt if not valid.
+  - [ ] Read Configuration - Read in configuration data.
+  - [ ] Validate Region Layout - Verify the region layout file is valid. Exit if not valid.
+  - [ ] Read Region Layout - Read in the region layout.
+- [ ] Initialize Region Data
+  - [ ] Build - Construct the region data based on the region layout.
+  - [ ] Set X & Y Max - Initialize the max X & Y coordinates.
+  - [ ] Set Time Limit - Initialize the time limit based on the configuration data.
+  - [ ] Set Refresh Rate - Initialize the refresh rate based on the configuration data.
+- [ ] Initialize Next Time Step Matrix
+- [ ] Output - Print the initial region state.
+- [ ] Loop
+  - [ ] Cell Updates v1 (copies what was done in the original C++ version, not sure if it scales accurately)
+    - [ ] Run updates on all commercial cells.
+    - [ ] Run updates on all industrial cells.
+    - [ ] Run updates on all residential cells.
+  - [ ] Cell Updates v2
+    - [ ] Iterate through each cell down the X axis for each point on the Y axis.
+      - [ ] Run updates on the cell based on what it is zoned as (this may run into prioritization issues).
+  - [ ] Run updates on pollution.
+  - [ ] Output - Print the current time step, available workers, and available goods.
+  - [ ] Determine if the current time step is divisible by the refresh rate.
+    - [ ] If so, print the current region state.
+  - [ ] Determine if there are any changes between the current time step and the next.
+    - [ ] If not, end the simulation.
+- [ ] Output - Print the final region state.
+- [ ] Output - Print the final pollution state.
+- [ ] Output - Print the full regional analysis.
+- [ ] Input - Prompt for a selective regional analysis using min & max X & Y limits.
+  - [ ] Validate X & Y Limits - Verify they are within in range. Prompt for new limits if not.
+- [ ] Output - Print the selective regional analysis.
+- [ ] End the simulation.
 
 ## data.cs
 
