@@ -132,7 +132,7 @@ The intent of this project is to simulate the growth of a city over time with a 
   - [ ] If its population = 4 & is adjacent to 8+ cells with a population of 4+.
 
 **Simulation - Industrial**
-- [ ] For the following conditions, increment an I cell's population & assign the available workers to that job if there are 2+ available workers:
+- [ ] For the following conditions, increment an I cell's population & assign 2 available workers to that job if there are 2+ available workers:
   - [ ] If its population = 0 & it is adjacent to a T or #.
   - [ ] If its population = 0 & it is adjacent to 1+ cells with a population of 1+.
   - [ ] If its population = 1 & it is adjacent to 2+ cells with a population of 1+.
