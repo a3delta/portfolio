@@ -91,13 +91,11 @@ This document is used for planning how to approach the design of this project, f
 - [ ] End the simulation.
 
 ## data.cs
-- [ ] Declare data class for base cells.
+- [ ] Function to create a 2D array template of multiple types (char, int).
+  - *char* is used for the base region layout.
+  - *int* is used for the pollution analysis layout.
+- [ ] Declare data class for zoned cells from base cells.
   - [ ] Declare get & set functions for each attribute.
-- [ ] Declare child data class for zoned cells from base cells.
-  - [ ] Declare get & set functions for each attribute.
-- [ ] Declare a class that acts as a hash for cell-level updates between time steps (may handle this differently).
-  - [ ] Declare get & set functions for each attribute.
-- [ ] Function to create a 2D array template of multiple types (char, cell, hash).
 
 ## io.cs
 - [ ] Input Function - Open and read contents of file.
