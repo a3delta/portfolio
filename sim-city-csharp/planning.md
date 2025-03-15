@@ -71,13 +71,12 @@ This document is used for planning how to approach the design of this project, f
 - [ ] Initialize Next Time Step Matrix
 - [ ] Output - Print the initial region state.
 - [ ] Loop
-  - [ ] Cell Updates v1 (copies what was done in the original C++ version, not sure if it scales accurately)
-    - [ ] Run updates on all commercial cells.
-    - [ ] Run updates on all industrial cells.
-    - [ ] Run updates on all residential cells.
-  - [ ] Cell Updates v2
-    - [ ] Iterate through each cell down the X axis for each point on the Y axis.
-      - [ ] Run updates on the cell based on what it is zoned as (this may run into prioritization issues).
+  - [ ] Cell Updates
+    - [ ] Order zoned cells based on growth priority rules.
+    - [ ] Iterate through each zoned cell.
+      - [ ] If an R cell, run residential growth updates.
+      - [ ] If a C cell, run commercial growth updates.
+      - [ ] If an I cell, run industrial growth updates.
   - [ ] Output - Print the current time step, available workers, and available goods.
   - [ ] Determine if the current time step is divisible by the refresh rate.
     - [ ] If so, print the current region state.
