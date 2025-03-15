@@ -154,13 +154,19 @@ This document is used for planning how to approach the design of this project, f
   - Pass positive numbers for addition and negative for subtraction.
 - [ ] Function to update the number of available goods by the amount passed to it.
   - Pass positive numbers for addition and negative for subtraction.
+- [ ] Function to build out the ordered zoned cell array for growth simulation.
+  - [ ] 1. C cells are prioritized over I cells.
+  - [ ] 2. Between 2 cells, the cell with a larger population is prioritized.
+  - [ ] 3. Between 2 cells, the cell with a larger total adjacent population is prioritized.
+  - [ ] 4. Between 2 cells, the cell with the smaller Y coordinate is prioritized.
+  - [ ] 5. Between 2 cells, the cell with the smaller X coordinate is prioritized.
 
 
 ## BRAINSTORMING
-- Prioritization rules - I need to make sure not to forget about these since they are vital to growth choices.
 - Adjacencies - What about consideration for the number of cells with populations?
   - Is that necessary, or do all updates happen solely with a high enough adjacent population?
   - For instance, if there are 2+ adjacent cells with a population of 2+....
     - ...does this mean that it doesn't update if there is only 1 adjacent cell, even if it has a population of 2+?
     - ...or could this mean that it doesn't update if there are 2 adjacent cells, but they have a population of 1 & 3?
+- Do I need a function to update adjacent population values?
 
