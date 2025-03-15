@@ -112,11 +112,11 @@ This document is used for planning how to approach the design of this project, f
   - [ ] Update cell's population by the amount specified in the next population update attribute.
   - [ ] Reinitialize the cell's next population update attribute to 0.
   - [ ] If the cell's population is 0...
-    - [ ] ...and is next to a T or # or its adjacent population is 1+, increment the cell's next population update.
+    - [ ] ...and is next to a T or # or its adjacent to 1+ cells with a population of 1+, increment the cell's next population update.
   - [ ] If the cell's population is 1, 2, or 3...
-    - [ ] ...and its neighboring population is its population x2 or greater, increment the cell's next population update.
-  - [ ] If the cell's population is 4 or greater...
-    - [ ] ...and its neighboring population is 8 or greater, increment the cell's next population update.
+    - [ ] ...and its adjacent to 2+, 4+, or 6+ cells with a population of 1+, 2+, or 3+, increment the cell's next population update.
+  - [ ] If the cell's population is 4+...
+    - [ ] ...and its adjacent to 8+ cells with a population of 4+, increment the cell's next population update.
   - [ ] If the cell's population is increased, increase the number of available workers by the same amount.
 
 ## zone-industrial.cs
@@ -125,14 +125,24 @@ This document is used for planning how to approach the design of this project, f
   - [ ] Reinitialize the cell's next population update attribute to 0.
   - [ ] Verify there is at least 2 workers available & break the growth function if not.
   - [ ] If the cell's population is 0...
-    - [ ] ...and is next to a T or # or its neighboring population is 1+, increment the cell's next population update.
-  - [ ] If the cell's population is 1, 2, or 3...
-    - [ ] ...and its neighboring population is its population x2 or greater, increment the cell's next population update.
-  - [ ] If the cell's population is 4 or greater...
-    - [ ] ...and its neighboring population is 8 or greater, increment the cell's next population update.
-  - [ ] If the cell's population is increased, increase the number of available workers by the same amount.
+    - [ ] ...and is next to a T or # or its adjacent to 1+ cells with a population of 1+, increment the cell's next population update.
+  - [ ] If the cell's population is 1...
+    - [ ] ...and its adjacent to 2+ cells with a population of 1+, increment the cell's next population update.
+  - [ ] If the cell's population is 2+...
+    - [ ] ...and its adjacent to 4+ cells with a population of 2+, increment the cell's next population update.
+  - [ ] If the cell's population is increased, increase the number of available goods by the same amount.
+  - [ ] If the cell's population is increased, decrease the number of available workers by 2.
 
 ## zone-commercial.cs
+- [ ] Growth Function of C zoned cells
+  - [ ] Update cell's population by the amount specified in the next population update attribute.
+  - [ ] Reinitialize the cell's next population update attribute to 0.
+  - [ ] Verify there is at least 1 worker & 1 good available & break the growth function if not.
+  - [ ] If the cell's population is 0...
+    - [ ] ...and is next to a T or # or its adjacent to 1+ cells with a population of 1+, increment the cell's next population update.
+  - [ ] If the cell's population is 1...
+    - [ ] ...and its adjacent to 2+ cells with a population of 1+, increment the cell's next population update.
+  - [ ] If the cell's population is increased, decrease the number of available workers & goods by 1 each.
 
 ## pollution.cs
 - [ ] Pollution Calculation - Take the final region state layout, and distribute pollution accordingly.
