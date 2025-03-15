@@ -119,8 +119,8 @@ The intent of this project is to simulate the growth of a city over time with a 
 - [ ] The top left cell has the [X,Y] coordinates of [0,0].
 - [ ] All rules are evaluated at the current time step & all values are updated during the next time step.
 - [ ] R population provides workers to I & C zones, but each worker can only have one job.
-- [ ] I cells produce pollution = its population, and polution spreads to all adjacent cells at a rate of one less unit of pollution per cell away from the source.
 - [ ] I population provides goods to the C zones at a rate of 1 good / population, but each good can only be sold at 1 C cell.
+- [ ] I cells produce pollution = its population, and polution spreads to all adjacent cells at a rate of one less unit of pollution per cell away from the source.
 
 **Simulation - Residential**
 - [ ] For the following conditions, increment an R cell's population:
