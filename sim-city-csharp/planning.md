@@ -112,7 +112,7 @@ This document is used for planning how to approach the design of this project, f
   - [ ] Update cell's population by the amount specified in the next population update attribute.
   - [ ] Reinitialize the cell's next population update attribute to 0.
   - [ ] If the cell's population is 0...
-    - [ ] ...and is next to a T or # or its neighboring population is 1+, increment the cell's next population update.
+    - [ ] ...and is next to a T or # or its adjacent population is 1+, increment the cell's next population update.
   - [ ] If the cell's population is 1, 2, or 3...
     - [ ] ...and its neighboring population is its population x2 or greater, increment the cell's next population update.
   - [ ] If the cell's population is 4 or greater...
@@ -120,10 +120,17 @@ This document is used for planning how to approach the design of this project, f
   - [ ] If the cell's population is increased, increase the number of available workers by the same amount.
 
 ## zone-industrial.cs
-- [ ] Growth Function
+- [ ] Growth Function of I zoned cells
+  - [ ] Update cell's population by the amount specified in the next population update attribute.
+  - [ ] Reinitialize the cell's next population update attribute to 0.
   - [ ] Verify there is at least 2 workers available & break the growth function if not.
-  - [ ] Take an I zoned cell (validate that it is I type if passing logic does not).
-  - [ ] 
+  - [ ] If the cell's population is 0...
+    - [ ] ...and is next to a T or # or its neighboring population is 1+, increment the cell's next population update.
+  - [ ] If the cell's population is 1, 2, or 3...
+    - [ ] ...and its neighboring population is its population x2 or greater, increment the cell's next population update.
+  - [ ] If the cell's population is 4 or greater...
+    - [ ] ...and its neighboring population is 8 or greater, increment the cell's next population update.
+  - [ ] If the cell's population is increased, increase the number of available workers by the same amount.
 
 ## zone-commercial.cs
 
@@ -140,9 +147,10 @@ This document is used for planning how to approach the design of this project, f
 
 
 ## BRAINSTORMING
-- Tracking growth - is there a need to track the whole grid?
-  - I could only track the zoned cells that grow and ignore the rest.
-    - If I store them as a list of zoned cells, I could sort them based on prioritization criteria
-    - Then I process their growth in order.
 - Prioritization rules - I need to make sure not to forget about these since they are vital to growth choices.
+- Adjacencies - What about consideration for the number of cells with populations?
+  - Is that necessary, or do all updates happen solely with a high enough adjacent population?
+  - For instance, if there are 2+ adjacent cells with a population of 2+....
+    - ...does this mean that it doesn't update if there is only 1 adjacent cell, even if it has a population of 2+?
+    - ...or could this mean that it doesn't update if there are 2 adjacent cells, but they have a population of 1 & 3?
 
