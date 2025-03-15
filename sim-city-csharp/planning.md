@@ -115,11 +115,29 @@ This document is used for planning how to approach the design of this project, f
   - [ ] If the cell's population is increased, increase the number of available workers by the same amount.
 
 ## zone-industrial.cs
+- [ ] Growth Function
+  - [ ] Verify there is at least 2 workers available & break the growth function if not.
+  - [ ] Take an I zoned cell (validate that it is I type if passing logic does not).
+  - [ ] 
 
 ## zone-commercial.cs
 
 ## pollution.cs
+- [ ] Pollution Calculation - Take the final region state layout, and distribute pollution accordingly.
+  - I cell pollution is equal to its population.
+  - Pollution in other cells is equal to the nearest I cell pollution minus the shortest distance of X & Y values.
 
 ## analysis.cs
 - [ ] Function to update the number of available workers by the amount passed to it.
+  - Pass positive numbers for addition and negative for subtraction.
+- [ ] Function to update the number of available goods by the amount passed to it.
+  - Pass positive numbers for addition and negative for subtraction.
+
+
+## BRAINSTORMING
+- Tracking growth - is there a need to track the whole grid?
+  - I could only track the zoned cells that grow and ignore the rest.
+    - If I store them as a list of zoned cells, I could sort them based on prioritization criteria
+    - Then I process their growth in order.
+- Prioritization rules - I need to make sure not to forget about these since they are vital to growth choices.
 
