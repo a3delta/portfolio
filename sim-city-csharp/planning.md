@@ -18,23 +18,30 @@ This document is used for planning how to approach the design of this project, f
 - **Region Layout**
   - \[*array*\]\[*array*\]\[*char*\] cell layout
     - Regional layout of cell types as a flat rectangle from a matrix in CSV format.
-- **Base Cell Class**
+    - Used when checking adjacency information & printing region states.
+- **Zoned Cell Class**
   - \[*char*\] type
     - Cell types can be represented as a single letter (may update to string when adding features).
-- **Zoned Cell Class**
   - \[*int*\] population
     - All zoned cells have a population.
   - \[*array*\]\[*tuple*\] adjacencies
     - All zoned cells have rules regarding adjacenices comparisons.
+    - Calculated once at initialization.
     - Storing will be faster than calculating (if space becomes an issue, switch to calculated adjacencies).
-- **Cell Matrix**
-  - \[*array*\]\[*array*\]\[*cell*\] cells with full data based on inheritance
-    - Cells can be accessed fast due to their ordered congruous layout.
-    - Searching, insertions, and deletions are not necessary for this simulation (if they were, this type should be re-evaluated).
-    - Choosing this over multiple simple 2D arrays/matrices since multiple matrices would result in unnecessary additional space usage.
-- **Next Time Step Matrix**
-  - \[*array*\]\[*array*\]\[*hash*\] changes to make to the region on the next time step
-    - Hash tables should have 3 keys for population, workers, and goods containing ints of how much to change those values by.
+  - \[*int*\] adjacent population
+    - Used for growth prioritization.
+  - \[*int*\] next population update
+    - This will hold the population update for this cell during the next time step.
+- **Zoned Cell Hash Table**
+  - \[*hash*\]\[*cell*\] table of zoned cells
+    - Hash table keys will be strings of X/Y coordinate tuples.
+    - Zoned cells are the only cells that will be altered by growth in this simulation.
+    - Cell data can be retrieved fast due to the fast lookup capabilities of hash tables.
+    - This data structure will not be sorted, inserted into, or deleted from after initialization.
+- **Growth Priority Array**
+  - \[*array*\]\[*string*\] ordered cell coordinate tuples
+    - Cell coordinate tuples will be ordered based on growth prioritization rules.
+    - An array is easy and fast to iterate through, and insertions have a comparable time complexity to linked lists.
 - **Analysis Variables**
   - \[*int*\] workers (available)
     - NOT NEEDED: workers total *This is the total R population; no need to track this outside of regional analysis.*
