@@ -77,6 +77,7 @@ This document is used for planning how to approach the design of this project, f
       - [ ] If an R cell, run residential growth updates.
       - [ ] If a C cell, run commercial growth updates.
       - [ ] If an I cell, run industrial growth updates.
+    - [ ] Update adjacenct cell populations for each zoned cell.
   - [ ] Output - Print the current time step, available workers, and available goods.
   - [ ] Determine if the current time step is divisible by the refresh rate.
     - [ ] If so, print the current region state.
@@ -107,15 +108,15 @@ This document is used for planning how to approach the design of this project, f
 - [ ] Output Function - Print out regional analysis information.
 
 ## zone-residential.cs
-- [ ] Growth Function
-  - [ ] Take an R zoned cell (validate that it is R type if passing logic does not).
-  - [ ] Get the cell's population & adjacent cell X & Y coordinates.
+- [ ] Growth Function of R zoned cells
+  - [ ] Update cell's population by the amount specified in the next population update attribute.
+  - [ ] Reinitialize the cell's next population update attribute to 0.
   - [ ] If the cell's population is 0...
-    - [ ] ...and is next to a T or # or its neighboring population is 1+, increment the cell's population.
+    - [ ] ...and is next to a T or # or its neighboring population is 1+, increment the cell's next population update.
   - [ ] If the cell's population is 1, 2, or 3...
-    - [ ] ...and its neighboring population is its population x2 or greater, increment the cell's population.
+    - [ ] ...and its neighboring population is its population x2 or greater, increment the cell's next population update.
   - [ ] If the cell's population is 4 or greater...
-    - [ ] ...and its neighboring population is 8 or greater, increment the cell's population.
+    - [ ] ...and its neighboring population is 8 or greater, increment the cell's next population update.
   - [ ] If the cell's population is increased, increase the number of available workers by the same amount.
 
 ## zone-industrial.cs
