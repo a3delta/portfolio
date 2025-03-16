@@ -168,5 +168,7 @@ This document is used for planning how to approach the design of this project, f
   - For instance, if there are 2+ adjacent cells with a population of 2+....
     - ...does this mean that it doesn't update if there is only 1 adjacent cell, even if it has a population of 2+?
     - ...or could this mean that it doesn't update if there are 2 adjacent cells, but they have a population of 1 & 3?
+  - ANSWER: Each of the x+ adjacent cells must have a population of y+.
 - Do I need a function to update adjacent population values?
+  - ANSWER: No, because this will be covered by set methods in the class definition.
 
