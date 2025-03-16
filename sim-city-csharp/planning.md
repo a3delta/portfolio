@@ -5,14 +5,14 @@
 This document is used for planning how to approach the design of this project, from data structures to functional breakdowns and how files are laid out.
 
 ## Files
-- [ ] main.cs - This will be the core code where all function calls are made.
-- [ ] data.cs - This will be where data structures and their functions are defined.
-- [ ] io.cs - This will be where data input and output functions are defined.
-- [ ] zone-residential.cs - This will be where residential zone functions are defined.
-- [ ] zone-industrial.cs - This will be where industrial zone functions are defined.
-- [ ] zone-commercial.cs - This will be where commercial zone functions are defined.
-- [ ] pollution.cs - This will be where pollution functions are defined.
-- [ ] analysis.cs - This will be where whole & partial regional analysis functions are defined.
+- [ ] Program.cs - This will be the core code where all function calls are made.
+- [ ] Data.cs - This will be where data structures and their functions are defined.
+- [ ] IO.cs - This will be where data input and output functions are defined.
+- [ ] Zone-Residential.cs - This will be where residential zone functions are defined.
+- [ ] Zone-Industrial.cs - This will be where industrial zone functions are defined.
+- [ ] Zone-Commercial.cs - This will be where commercial zone functions are defined.
+- [ ] Pollution.cs - This will be where pollution functions are defined.
+- [ ] Analysis.cs - This will be where whole & partial regional analysis functions are defined.
 
 ## Data Types
 - **Region Layout**
@@ -57,7 +57,7 @@ This document is used for planning how to approach the design of this project, f
     - All cells can acquire pollution.
     - Pollution is only reported at the end, so calculation is only necessary then.
 
-## main.cs
+## Program.cs
 - [ ] Input - Prompt user for a configuration file name.
   - [ ] Validate Configuration - Verify the file is valid. Reprompt if not valid.
   - [ ] Read Configuration - Read in configuration data.
@@ -91,14 +91,14 @@ This document is used for planning how to approach the design of this project, f
 - [ ] Output - Print the selective regional analysis.
 - [ ] End the simulation.
 
-## data.cs
+## Data.cs
 - [ ] Function to create a 2D array template of multiple types (char, int).
   - *char* is used for the base region layout.
   - *int* is used for the pollution analysis layout.
 - [ ] Declare data class for zoned cells from base cells.
   - [ ] Declare get & set functions for each attribute.
 
-## io.cs
+## IO.cs
 - [ ] Input Function - Open and read contents of file.
   - [ ] Validate the file exists.
 - [ ] IO Function - Print out a message to the user, and take a file name as input.
@@ -107,7 +107,7 @@ This document is used for planning how to approach the design of this project, f
 - [ ] Output Function - Print out region layout state (incorporate spacing based on values).
 - [ ] Output Function - Print out regional analysis information.
 
-## zone-residential.cs
+## Zone-Residential.cs
 - [ ] Growth Function of R zoned cells
   - [ ] Update cell's population by the amount specified in the next population update attribute.
   - [ ] Reinitialize the cell's next population update attribute to 0.
@@ -119,7 +119,7 @@ This document is used for planning how to approach the design of this project, f
     - [ ] ...and its adjacent to 8+ cells with a population of 4+, increment the cell's next population update.
   - [ ] If the cell's population is increased, increase the number of available workers by the same amount.
 
-## zone-industrial.cs
+## Zone-Industrial.cs
 - [ ] Growth Function of I zoned cells
   - [ ] Update cell's population by the amount specified in the next population update attribute.
   - [ ] Reinitialize the cell's next population update attribute to 0.
@@ -133,7 +133,7 @@ This document is used for planning how to approach the design of this project, f
   - [ ] If the cell's population is increased, increase the number of available goods by the same amount.
   - [ ] If the cell's population is increased, decrease the number of available workers by 2.
 
-## zone-commercial.cs
+## Zone-Commercial.cs
 - [ ] Growth Function of C zoned cells
   - [ ] Update cell's population by the amount specified in the next population update attribute.
   - [ ] Reinitialize the cell's next population update attribute to 0.
@@ -144,12 +144,12 @@ This document is used for planning how to approach the design of this project, f
     - [ ] ...and its adjacent to 2+ cells with a population of 1+, increment the cell's next population update.
   - [ ] If the cell's population is increased, decrease the number of available workers & goods by 1 each.
 
-## pollution.cs
+## Pollution.cs
 - [ ] Pollution Calculation - Take the final region state layout, and distribute pollution accordingly.
   - I cell pollution is equal to its population.
   - Pollution in other cells is equal to the nearest I cell pollution minus the shortest distance of X & Y values.
 
-## analysis.cs
+## Analysis.cs
 - [ ] Function to update the number of available workers by the amount passed to it.
   - Pass positive numbers for addition and negative for subtraction.
 - [ ] Function to update the number of available goods by the amount passed to it.
